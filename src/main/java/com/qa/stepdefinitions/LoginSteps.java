@@ -2,43 +2,42 @@ package com.qa.stepdefinitions;
 
 import com.qa.driver.DriverFactory;
 import com.qa.pages.LoginPage;
-
-import io.cucumber.java.PendingException;
-import io.cucumber.java.en.*;
+import com.qa.utils.ConfigReader;
+import io.cucumber.java.pt.*;
 
 public class LoginSteps {
 
     LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 
-    @Given("user is on login page")
-    public void user_is_on_login_page() {
+    @Dado("que o usuário está na página de login")
+    public void usuario_esta_na_pagina_de_login() {
+
+        DriverFactory.getDriver().get(ConfigReader.getProperty("baseUrl"));
 
     }
-
-    @When("user enters username {string}")
-    public void user_enters_username(String username) {
+    @Quando("o usuário informa o nome de usuário {string}")
+    public void usuario_informa_nome_de_usuario(String username) {
 
         loginPage.enterUsername(username);
 
     }
 
-    @When("user enters password {string}")
-    public void user_enters_password(String password) {
+    @Quando("o usuário informa a senha {string}")
+    public void usuario_informa_senha(String password) {
 
         loginPage.enterPassword(password);
 
     }
 
-    @When("user clicks login")
-    public void user_clicks_login() {
+    @Quando("o usuário clica no botão de login")
+    public void usuario_clica_no_botao_de_login() {
 
         loginPage.clickLogin();
 
     }
 
-    @Then("user should be redirected to inventory page")
-    public void userShouldBeRedirectedToInventoryPage() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    @Então("o usuário deve ser redirecionado para a página de inventário")
+    public void usuario_deve_ser_redirecionado_para_pagina_de_inventario() {
+
     }
 }

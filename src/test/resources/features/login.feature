@@ -1,10 +1,11 @@
-Feature: Login functionality
+# language: pt
 
-  Scenario: Successful login
+Funcionalidade: Funcionalidade de login
 
-    Given user is on login page
-    When user enters username "standard_user"
-    And user enters password "secret_sauce"
-    And user clicks login
-    Then user should be redirected to inventory page
+  Cenário: Login com sucesso
 
+    Dado que o usuário está na página de login
+    Quando o usuário informa o nome de usuário "standard_user"
+    E o usuário informa a senha "secret_sauce"
+    E o usuário clica no botão de login
+    Então o usuário deve ser redirecionado para a página de inventário

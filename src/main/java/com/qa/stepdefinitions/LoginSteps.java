@@ -15,6 +15,7 @@ public class LoginSteps {
         DriverFactory.getDriver().get(ConfigReader.getProperty("baseUrl"));
 
     }
+
     @Quando("o usuário informa o nome de usuário {string}")
     public void usuario_informa_nome_de_usuario(String username) {
 
@@ -38,6 +39,7 @@ public class LoginSteps {
 
     @Então("o usuário deve ser redirecionado para a página de inventário")
     public void usuario_deve_ser_redirecionado_para_pagina_de_inventario() {
-
+        // Aqui você pode adicionar uma verificação para garantir que o usuário foi redirecionado para a página de inventário
+        // Por exemplo, verificando a URL ou um elemento específico da página de inventário
     }
 }

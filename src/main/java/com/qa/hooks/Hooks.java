@@ -1,15 +1,17 @@
 package com.qa.hooks;
 
 import com.qa.driver.DriverFactory;
+import com.qa.utils.ConfigReader;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 public class Hooks {
 
+
     @Before
     public void setup(){
 
-        DriverFactory.getDriver().get("https://www.saucedemo.com/");
+        DriverFactory.getDriver().get(ConfigReader.getProperty("baseUrl"));
 
     }
 

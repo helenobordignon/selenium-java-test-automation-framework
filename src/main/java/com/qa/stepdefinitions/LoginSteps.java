@@ -37,9 +37,8 @@ public class LoginSteps {
 
     }
 
-    @Então("o usuário deve ser redirecionado para a página de inventário")
-    public void usuario_deve_ser_redirecionado_para_pagina_de_inventario() {
-        // Aqui você pode adicionar uma verificação para garantir que o usuário foi redirecionado para a página de inventário
-        // Por exemplo, verificando a URL ou um elemento específico da página de inventário
+    @Então("o usuário deve ser redirecionado para a página inicial")
+    public void usuario_deve_ser_redirecionado_para_pagina_inicial() {
+
     }
 }

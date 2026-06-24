@@ -5,7 +5,7 @@ import java.util.Properties;
 
 public class ConfigReader {
 
-    private static Properties prop;
+    private static final Properties prop;
 
     static {
         try {
@@ -13,7 +13,7 @@ public class ConfigReader {
             prop = new Properties();
             prop.load(fis);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException("Failed to load config.properties", e);
         }
     }
 
